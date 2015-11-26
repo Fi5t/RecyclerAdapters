@@ -14,4 +14,10 @@
         android:orderInCategory="100"
         android:title="@string/headers_list_label"
         app:showAsAction="never" />
+
+    <item
+        android:id="@+id/filterable_activity"
+        android:orderInCategory="100"
+        android:title="@string/filterable_adapters_label"
+        app:showAsAction="never" />
 </menu>

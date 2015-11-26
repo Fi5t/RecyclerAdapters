@@ -3,4 +3,10 @@
 
     <string name="simple_list_label">Simple list</string>
     <string name="headers_list_label">Headers list</string>
+    <string name="filterable_adapters_label">Filterable adapters</string>
+
+    <string name="search_label">Search</string>
+    <string name="search_hint">Search...</string>
+    <string name="search_no_results">No results</string>
+
 </resources>
