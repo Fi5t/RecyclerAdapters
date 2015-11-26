@@ -101,4 +101,8 @@ public abstract class ArrayAdapter<T, VH extends RecyclerView.ViewHolder>
             notifyItemRemoved(position);
         }
     }
+
+    public boolean isEmpty() {
+        return mList.isEmpty();
+    }
 }

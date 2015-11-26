@@ -1,5 +1,6 @@
 package ru.freedomlogic.recycleradapterssample;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -59,6 +60,10 @@ public class MainActivity extends AppCompatActivity {
 
             case R.id.headers_list:
                 mRecyclerView.setAdapter(mHeadersAdapter);
+                return true;
+
+            case R.id.filterable_activity:
+                startActivity(new Intent(this, FilterableActivity.class));
                 return true;
 
             default:
