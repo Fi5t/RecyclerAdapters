@@ -21,6 +21,15 @@ public abstract class ArrayAdapter<T, VH extends RecyclerView.ViewHolder>
         setHasStableIds(hasStableIds);
     }
 
+    public ArrayAdapter(@NonNull final List<T> list) {
+        setList(list);
+    }
+
+    public ArrayAdapter(@NonNull final List<T> list, final boolean hasStableIds) {
+        setList(list);
+        setHasStableIds(hasStableIds);
+    }
+
 
     @Override
     public long getItemId(final int position) {
@@ -88,6 +97,11 @@ public abstract class ArrayAdapter<T, VH extends RecyclerView.ViewHolder>
         return mList;
     }
 
+    public final void setList(@NonNull final List<T> list) {
+        mList.clear();
+        mList.addAll(list);
+        notifyItemRangeInserted(0, list.size());
+    }
 
     /**
      * Workaround to avoid a recyclerview bug
