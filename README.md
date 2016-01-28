@@ -8,6 +8,6 @@ repositories {
 }
 
 dependencies {
-    compile 'ru.freedomlogic:recycleradapters:1.2'
+    compile 'ru.freedomlogic:recycleradapters:1.3'
 }
 ```
