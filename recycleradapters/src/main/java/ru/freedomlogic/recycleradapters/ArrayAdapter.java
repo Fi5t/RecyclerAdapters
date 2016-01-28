@@ -69,8 +69,8 @@ public abstract class ArrayAdapter<T, VH extends RecyclerView.ViewHolder>
     }
 
     public final void remove(@NonNull final T item) {
-        mList.remove(item);
-        notifyItemRemovedSafe(mList.indexOf(item));
+        final int index = mList.indexOf(item);
+        remove(index);
     }
 
     public final void remove(final int position) {
