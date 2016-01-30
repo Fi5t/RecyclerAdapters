@@ -1,5 +1,4 @@
 apply plugin: 'com.android.library'
-apply from: 'deploy.gradle'
 
 android {
     compileSdkVersion 22
