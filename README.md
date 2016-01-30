@@ -1,4 +1,6 @@
 # RecyclerAdapters
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/ru.freedomlogic/recycleradapters/badge.svg)](https://maven-badges.herokuapp.com/maven-central/ru.freedomlogic/recycleradapters)
+
 Library contains useful recyclerview adapters.
 
 ## Including in your project
