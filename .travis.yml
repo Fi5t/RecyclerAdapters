@@ -1,19 +1,9 @@
 language: android
-jdk: oraclejdk8
-
 android:
   components:
     - platform-tools
-    - tools
+    - build-tools-23.0.1
     - android-23
-    - build-tools-23.0.2
-    - extra-android-m2repository
-    - extra-android-support
-    - sys-img-armeabi-v7a-android-18
 
-  script: ./gradlew :recycleradapters:assemble
-
-cache:
-  directories:
-    - $HOME/.m2
-    - $HOME/.gradle
+script:
+   - ./gradlew :recycleradapters:build
