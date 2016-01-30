@@ -1,0 +1,57 @@
+apply plugin: 'maven'
+apply plugin: 'signing'
+
+group = "ru.freedomlogic"
+archivesBaseName = "recycleradapters"
+version = "1.3"
+
+configurations {
+    archives {
+        extendsFrom configurations.default
+    }
+}
+
+signing {
+    required { has("release") && gradle.taskGraph.hasTask("uploadArchives") }
+    sign configurations.archives
+}
+
+uploadArchives {
+    configuration = configurations.archives
+    repositories.mavenDeployer {
+        beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
+
+        repository(url: "https://oss.sonatype.org/service/local/staging/deploy/maven2/") {
+            authentication(userName: sonatypeUsername, password: sonatypePassword)
+        }
+
+        pom.project {
+            name 'RecyclerAdapters Library'
+            packaging 'aar'
+            description 'Library contains useful recyclerview adapters'
+            url 'https://github.com/Fi5t/RecyclerAdapters'
+
+            scm {
+                url 'scm:git@github.com:Fi5t/RecyclerAdapters.git'
+                connection 'scm:git@github.com:Fi5t/RecyclerAdapters.git'
+                developerConnection 'scm:git@github.com:Fi5t/RecyclerAdapters.git'
+            }
+
+            licenses {
+                license {
+                    name 'The Apache Software License, Version 2.0'
+                    url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    distribution 'repo'
+                }
+            }
+
+            developers {
+                developer {
+                    id 'Fi5t'
+                    name 'Artem Kulakov'
+                    email 'coder31337@gmail.com'
+                }
+            }
+        }
+    }
+}
