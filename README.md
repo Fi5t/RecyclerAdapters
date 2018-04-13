@@ -1,4 +1,4 @@
-# RecyclerAdapters
+# RecyclerAdapters[Deprecated]
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/ru.freedomlogic/recycleradapters/badge.svg)](https://maven-badges.herokuapp.com/maven-central/ru.freedomlogic/recycleradapters)
 [![build status](https://travis-ci.org/Fi5t/RecyclerAdapters.svg)](https://travis-ci.org/Fi5t/RecyclerAdapters)
 
